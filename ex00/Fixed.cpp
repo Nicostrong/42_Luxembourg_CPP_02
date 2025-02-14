@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 10:36:19 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 11:05:23 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/14 11:30:48 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Fixed::~Fixed( void )
  *	Assignation operator overload, assign the value of src_object to the current
  *	object
  */
-Fixed &Fixed::operator=( const Fixed &src_object )
+Fixed	&Fixed::operator=( const Fixed &src_object )
 {
 	std::cout << "Copy assignation operator called" << std::endl;
 	if (this != &src_object)
