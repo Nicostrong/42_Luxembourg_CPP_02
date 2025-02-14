@@ -32,5 +32,17 @@ int	main( void )
 	std::cout	<< "Point p4 is inside the triangle: "
 				<< (bsp(a, b, c, p4) == 1 ? "YES" : "NO") << std::endl;
 
+	Point d(-10.0f, -5.0f);
+	Point e(-5.0f, -10.0f);
+	Point f(-7.5f, 0.0f);
+
+	Point p5(-8.0f, -5.0f);
+	Point p6(-2.8f, 0.6f);
+
+	std::cout	<< "Point p5 is inside the triangle: "
+				<< (bsp(d, e, f, p5) == 1 ? "YES" : "NO") << std::endl;
+	std::cout	<< "Point p6 is inside the triangle: "
+				<< (bsp(d, e, f, p6) == 1 ? "YES" : "NO") << std::endl;
+
 	return (0);
 }
