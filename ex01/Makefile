@@ -6,7 +6,7 @@
 #    By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/16 09:35:29 by nfordoxc          #+#    #+#              #
-#    Updated: 2025/02/13 15:49:16 by nfordoxc         ###   Luxembourg.lu      #
+#    Updated: 2025/02/14 10:53:45 by nfordoxc         ###   Luxembourg.lu      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,11 +63,11 @@ MYLIBS_BONUS	=
 ################################################################################
 
 SRC				=	main.cpp \
-					Harl.cpp
+					Fixed.cpp
 
 OBJ				=	$(SRC:.cpp=.o)
 
-NAME			=	harlfilter
+NAME			=	Fixed
 
 ################################################################################
 #	Bonus part																   #
