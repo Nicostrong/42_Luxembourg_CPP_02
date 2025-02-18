@@ -220,7 +220,7 @@ $(NAME):	$(OBJ)
 
 deb:		$(NAME)
 	@echo "$(BBLUE)==========	RUN DEBUG MODE	==========$(RESET)"
-	$(DEB) $(DEB_OPT) ./$(NAME) $(ARG0)
+	$(DEB) $(DEB_OPT) ./$(NAME)
 
 clean:
 	$(call delete_progress, *.o)
