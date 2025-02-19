@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 13:58:34 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 14:29:04 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/19 10:35:02 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ class Point
 		Point( const Point &src );
 		~Point( void );
 
+		/*	Assignation	but not operational	*/
+		Point		&operator=( const Point &src_object );
+
+		/*	Methodes	*/
 		const Fixed	&getX( void ) const;
 		const Fixed	&getY( void ) const;
 };
