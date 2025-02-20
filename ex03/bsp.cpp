@@ -6,11 +6,15 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 13:58:11 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 14:44:44 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:34:42 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
+
+/*******************************************************************************
+ *								FUNCTION									   *
+ ******************************************************************************/
 
 /*
  *	Function to calculate the area of a triangle using the coordinates of its points

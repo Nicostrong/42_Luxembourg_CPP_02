@@ -6,11 +6,15 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 13:58:21 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 10:28:59 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:37:39 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default constructor of class Point with 0 in value _x and _y
@@ -53,6 +57,10 @@ Point	&Point::operator=( const Point &src_object )
 	(void)src_object;
 	return (*this);
 }
+
+/*******************************************************************************
+ *								GETTER										   *
+ ******************************************************************************/
 
 /*
  *	Get the value of point X

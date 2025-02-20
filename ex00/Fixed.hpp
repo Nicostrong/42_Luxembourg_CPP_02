@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 10:36:07 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 11:04:26 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:23:50 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,18 @@ class Fixed
 
 	public:
 
+		/*	Canonical Form	*/
 		Fixed( void );
 		Fixed( const Fixed &src );
 		~Fixed( void );
 
 		Fixed	&operator=( const Fixed &src_object );
 
-		int		getRawBits( void ) const;
+		/*	Setter	*/
 		void	setRawBits( int const raw );
+
+		/*	Getter	*/
+		int		getRawBits( void ) const;
 
 };
 

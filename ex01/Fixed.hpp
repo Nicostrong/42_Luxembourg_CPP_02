@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 10:36:07 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 11:42:52 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:28:11 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Fixed
 
 	public:
 
+		/*	Canonical Form	*/
 		Fixed( void );
 		Fixed( const Fixed &src );
 		Fixed( const int value );
@@ -33,11 +34,15 @@ class Fixed
 
 		Fixed			&operator=( const Fixed &src_object );
 
+		/*	Setter	*/
+		void			setRawBits( int const raw );
+
+		/*	Getter	*/
+		int				getRawBits( void ) const;
+
+		/*	Method	*/
 		float			toFloat( void ) const;
 		int				toInt( void ) const;
-
-		int				getRawBits( void ) const;
-		void			setRawBits( int const raw );
 
 };
 

@@ -6,28 +6,32 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 10:36:19 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 13:46:15 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:32:07 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default constructor of class Fixed
  */
 Fixed::Fixed( void ) : _fixedPointValue(0)
 {
-	//	std::cout << "Default constructor called" << std::endl;
+	//	std::cout << "Default constructor called." << std::endl;
 	return ;
 }
 
 /*
- *	Copy constructor of class Fixed, copy the value of src to the current object
+ *	Copy constructor of class Fixed
  */
 Fixed::Fixed( const Fixed &src )
 {
 	*this = src;
-	//	std::cout << "Copy constructor called" << std::endl;
+	//	std::cout << "Copy constructor called." << std::endl;
 	return ;
 }
 
@@ -36,7 +40,7 @@ Fixed::Fixed( const Fixed &src )
  */
 Fixed::Fixed( const int value )
 {
-	//	std::cout << "Int constructor called" << std::endl;
+	//	std::cout << "Int constructor called." << std::endl;
 	this->_fixedPointValue = value << Fixed::_fractionalBits;
 	return ;
 }
@@ -46,7 +50,7 @@ Fixed::Fixed( const int value )
  */
 Fixed::Fixed( const float value )
 {
-	//	std::cout << "Float constructor called" << std::endl;
+	//	std::cout << "Float constructor called." << std::endl;
 	this->_fixedPointValue = roundf(value * (1 << Fixed::_fractionalBits));
 	return ;
 }
@@ -56,13 +60,9 @@ Fixed::Fixed( const float value )
  */
 Fixed::~Fixed( void )
 {
-	//	std::cout << "Destructor called" << std::endl;
+	//	std::cout << "Destructor called." << std::endl;
 	return ;
 }
-
-/*******************************************************************************
- *							OVERLOAD OPERATOR								   *
- ******************************************************************************/
 
 /*
  *	Assignation operator overload
@@ -73,6 +73,52 @@ Fixed	&Fixed::operator=( const Fixed &src_object )
 	if (this != &src_object)
 		this->_fixedPointValue = src_object.getRawBits();
 	return (*this);
+}
+
+/*******************************************************************************
+ *								SETTER										   *
+ ******************************************************************************/
+
+/*
+ *	Set the value of the fixed point
+ */
+void	Fixed::setRawBits( int const raw )
+{
+	this->_fixedPointValue = raw;
+	return ;
+}
+
+/*******************************************************************************
+ *								GETTER										   *
+ ******************************************************************************/
+
+/*
+ *	Return the value of the fixed point
+ */
+int		Fixed::getRawBits( void ) const
+{
+	//	std::cout << "getRawBits member function called" << std::endl;
+	return (this->_fixedPointValue);
+}
+
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
+
+/*
+ *	return the value of the fixed point as an float
+ */
+float	Fixed::toFloat( void ) const
+{
+	return ((float)this->_fixedPointValue / (1 << Fixed::_fractionalBits));
+}
+
+/*
+ *	return the value of the fixed point as an integer
+ */
+int		Fixed::toInt( void ) const
+{
+	return (this->_fixedPointValue >> Fixed::_fractionalBits);
 }
 
 /*******************************************************************************
@@ -225,7 +271,7 @@ Fixed	Fixed::operator--( int )
 }
 
 /*******************************************************************************
- *							MIN / MAX										   *
+ *								MIN / MAX									   *
  ******************************************************************************/
 
 /*
@@ -271,42 +317,4 @@ std::ostream	&operator<<( std::ostream &out, const Fixed &src_object )
 {
 	out << src_object.toFloat();
 	return (out);
-}
-
-/*******************************************************************************
- *							FIXED METHODE									   *
- ******************************************************************************/
-
-/*
- *	return the value of the fixed point as an float
- */
-float	Fixed::toFloat( void ) const
-{
-	return ((float)this->_fixedPointValue / (1 << Fixed::_fractionalBits));
-}
-
-/*
- *	return the value of the fixed point as an integer
- */
-int		Fixed::toInt( void ) const
-{
-	return (this->_fixedPointValue >> Fixed::_fractionalBits);
-}
-
-/*
- *	Return the value of the fixed point
- */
-int		Fixed::getRawBits( void ) const
-{
-	//	std::cout << "getRawBits member function called" << std::endl;
-	return (this->_fixedPointValue);
-}
-
-/*
- *	Set the value of the fixed point
- */
-void	Fixed::setRawBits( int const raw )
-{
-	this->_fixedPointValue = raw;
-	return ;
 }
