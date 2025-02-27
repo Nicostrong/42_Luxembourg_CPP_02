@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 13:58:34 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 10:38:25 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/27 11:49:50 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class Point
 		Fixed const	_x;
 		Fixed const	_y;
 
+		Point		&operator=( const Point &src_object );
+
 	public:
 
 		/*	Canonical Form	*/
@@ -29,8 +31,6 @@ class Point
 		Point( const float x, const float y );
 		Point( const Point &src );
 		~Point( void );
-
-		Point		&operator=( const Point &src_object );
 
 		/*	Getter	*/
 		const Fixed	&getX( void ) const;

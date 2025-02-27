@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 10:34:17 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/19 10:34:32 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/27 11:53:50 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,9 @@ int	main( void )
 	
 	Point	p7(15.4f, 54.6f);
 
-	std::cout << "Test assignment operator." << std::endl;
-	p7 = p3;
+	// You need to uncomment the two next line to see the not compilation
+	//std::cout << "Test assignment operator." << std::endl;
+	//p7 = p3;
 
 	return (0);
 }

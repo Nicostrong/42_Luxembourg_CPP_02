@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 13:58:21 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 10:37:39 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/27 11:49:57 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,6 @@ Point::Point( const Point &src ) : _x(src.getX()), _y(src.getY())
 Point::~Point( void )
 {
 	return ;
-}
-
-/*
- *	Assignation operator overload
- */
-Point	&Point::operator=( const Point &src_object )
-{
-	std::cout << "Assignment operator not fonctional because x and y are Fixed const." << std::endl;
-	(void)src_object;
-	return (*this);
 }
 
 /*******************************************************************************
